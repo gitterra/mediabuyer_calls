@@ -1,5 +1,5 @@
 import numpy as np
-import cleaner 
+from . import cleaner 
 
 def phrase_by_phrase(Signal_without_musik):
     """ Деление всего диалога на сегменты. На вход — сигнал без музыки. 
