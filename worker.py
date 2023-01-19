@@ -11,15 +11,7 @@ warnings.filterwarnings('ignore')
 
 # Пакет для анализа аудио
 import librosa
-import cleaner
-import cutter 
-import recognizer
-import ner
-import phone
-import pullenti
-import classificator
-import trigger
-import dicter
+from . import cleaner, cutter, recognizer, ner, phone, pullenti, classificator, trigger, dicter,
 
 # Вспомогательная функция ограничения ширины печатаемого текста (возможно есть штатные средства?)
 def print_lim(text, n_sym = 100):
