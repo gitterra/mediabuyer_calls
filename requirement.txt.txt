@@ -1,4 +1,0 @@
-pydub
-SpeechRecognition==3.8.1
-natasha
-pullenti-wrapper
