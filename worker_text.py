@@ -665,20 +665,11 @@ def glue_uncrossed_text(textes):
 
 """## 5. Классификация"""
 
-# Загрузка модели Tinkoff c Google диска
-gdown.download('https://drive.google.com/uc?id=1VF_ByGviod-klt8Q0pNYjsSV-hk8YQw2', None, quiet=True)
-
-# Распаковка архива в папку Models
-!unzip -qo model.zip -d Model
-
-# Просмотр содержимого папки
-!ls Model
-
 # Распаковка модели
-model = load_model('Model/model.h5')
+model = load_model('model.h5')
 
 # Распаковка токенайзера
-with open('Model/tokenizer.pickle', 'rb') as f:
+with open('tokenizer.pickle', 'rb') as f:
     tokenizer = pickle.load(f)
 
 # Список классов моделей (порядок который у меня был при обучении)
