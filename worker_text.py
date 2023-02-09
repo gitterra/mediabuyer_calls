@@ -46,7 +46,7 @@ from pydub import AudioSegment
 import speech_recognition as sR
 
 # Библиотека Yandex Speech Kit (платная)
-!pip install speechkit
+
 from speechkit import Session, SpeechSynthesis, ShortAudioRecognition
 
 # OAuth-токен для авторизации
