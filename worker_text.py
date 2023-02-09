@@ -47,7 +47,7 @@ import speech_recognition as sR
 
 # Библиотека Yandex Speech Kit (платная)
 
-from speechkit import Session, SpeechSynthesis, ShortAudioRecognition
+#from speechkit import Session, SpeechSynthesis, ShortAudioRecognition
 
 # OAuth-токен для авторизации
 oauth_token = "y0_AgAAAABdthwBAATuwQAAAADVdFJ07eBrIqfzQWqI9LU62LX7zYqCBHg"
