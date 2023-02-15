@@ -20,7 +20,16 @@ with open(fpickle, 'rb') as f:
 CLASS_LIST = ['1_Order','2_Recall','3_Phone','4_Break','5_Prank','6_Auto']
 
 # Подготовка и запуск предсказания объединенные в функцию
-def predict(text):
+def predict(fname = None,
+           txt = None):
+  data = None
+  if fname is not None:
+    with open(fname, 'r') as f:
+        data = f.read()
+  elif txt is not None:
+    data = txt
+  if data is None:
+    return  {CLASS_LIST[i]: 0 for i in range(len(CLASS_LIST))}
   # Преобразую строку в последовательность индексов согласно частотному словарю с помощью токенайзера, формирую в виде разреженной матрицы (bag of words) и отправляю в НС
   y_pred = model.predict(np.array(tokenizer.sequences_to_matrix(tokenizer.texts_to_sequences([text]))), verbose='0')[0]
   res = {CLASS_LIST[i]: round(y_pred[i],4) for i in range(len(CLASS_LIST))}
