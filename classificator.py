@@ -25,4 +25,4 @@ def predict(text):
   y_pred = model.predict(np.array(tokenizer.sequences_to_matrix(tokenizer.texts_to_sequences([text]))), verbose='0')  
   res = {CLASS_LIST[i]: round(y_pred[i],4) for i in range(len(CLASS_LIST))}
 
-  return CLASS_LIST[np.argmax(y_pred)], round(np.max(y_pred)*100,2)
+  return res
