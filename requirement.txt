@@ -1,5 +1,6 @@
 pydub
 SpeechRecognition==3.8.1
+librosa==0.8.1
 natasha
 pullenti-wrapper
 speechkit
